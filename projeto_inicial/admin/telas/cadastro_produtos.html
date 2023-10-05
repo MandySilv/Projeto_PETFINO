@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt"> <!-- Tag raiz do documento. "lang" define o idioma principal do documento como português -->
+
+<head> <!-- Cabeçalho do documento que contém metadados e links -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres do documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo para dispositivos móveis -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Petfino / Clientes</title> <!-- Título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="../assets/css/base/base.css">
+    <link rel="stylesheet" href="../assets/css/componentes/cabecalho.css">
+    <link rel="stylesheet" href="../assets/css/componentes/tabela.css"> 
+    <link rel="stylesheet" href="../assets/css/componentes/cartao.css">
+    <link rel="stylesheet" href="../assets/css/componentes/botao.css">
+    <link rel="stylesheet" href="../assets/css/componentes/inputs.css">
+    <link rel="stylesheet" href="">
+</head>
+
+<body> <!-- Corpo do documento, contém todo o conteúdo visível para o usuário -->
+
+    <header class="cabecalho container"> <!-- Cabeçalho do site, geralmente contém o logotipo, navegação, etc. -->
+        <img src="../assets/img/logo.png" alt="Petfino" class="cabecalho__logo">
+        <nav>
+            <ul class="cabecalho__lista-navegacao">
+                <li class="cabecalho__link"><a href="#">Dashboard</a></li>
+                <li class="cabecalho__link"><a href="./cadastro_produtos.html">Produtos</a></li>
+                <li class="cabecalho__link"><a href="./lista_cliente.html">Clientes</a></li>
+                <li class="cabecalho__link"><a href="#">Pets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container flex flex--centro flex--coluna"> 
+        <section class="cartao cadastro"> 
+            <h1 class="cartao__titulo">Novo Produto</h1>
+            <form class="flex flex--coluna" data-form> 
+                <div class="input-container">
+                    <label class="input-label" for="Produto">Produto</label>
+                    <input name="nome" id="nome" class="input" type="text" placeholder="Digite o nome do Produto" required data-produto>
+                    <span class="input-mensagem-erro">Esse campo não pode estar vazio</span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label" for="valor">valor</label>
+                    <input name="valor" id="valor" class="input" type="text" placeholder="Digite o Valor" required data-valor>
+                    <span class="input-mensagem-erro">Esse campo não pode estar vazio</span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label" for="Descrição">Descrição</label>
+                    <input name="Descrição" id="Descrição" class="input" type="text" placeholder="Digite a Descrição" required data-desc>
+                </div>
+                <button type="submit" class="botao">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="../controller/cadastrarProduto.js"></script> <!-- Script JS para interação e funcionalidade -->
+</body>
+
+</html> <!-- Final do documento HTML -->
